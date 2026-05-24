@@ -218,8 +218,8 @@ v_clip = M_projection × M_modelview × v_object
 
 ## 👤 Autor
 
-**Alejandro De Mendoza**  
-Ingeniería Informática — Séptimo Semestre  
+**Ing. Alejandro De Mendoza**  
+Ingeniería Informática 
 Fundación Universitaria Internacional de la Rioja  
 Bogotá D.C. · 2026
 
