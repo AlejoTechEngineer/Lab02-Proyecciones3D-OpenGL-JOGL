@@ -1,4 +1,4 @@
-# 🎲 Lab02 — Proyecciones 3D en OpenGL
+# <div align="center">🎲 Lab02 — Proyecciones 3D en OpenGL</div>
 
 <div align="center">
 
