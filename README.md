@@ -23,6 +23,22 @@ Implementación de un sistema de visualización de **proyecciones 3D** usando Op
 
 ---
 
+## Arquitectura
+
+```mermaid
+flowchart TD
+    A[main - SwingUtilities + JFrame] --> B[GLCanvas - JOGL Context]
+    B --> C[init - Configura OpenGL]
+    B --> D[reshape - Dimensiones W/H]
+    B --> E[display - Loop de Renderizado]
+    E --> F[proyeccionOrtogonal - Cuadrante Sup-Izq]
+    E --> G[proyeccionGabinete - Cuadrante Sup-Der]
+    E --> H[proyeccionPerspectivaSimetrica - Cuadrante Inf-Izq]
+    E --> I[proyeccionPerspectivaOblicua - Cuadrante Inf-Der]
+    E --> J[dibujarSeparadores - Lineas Divisorias 2D]
+    F & G & H & I --> K[Cubo 3D - Renderizado en 4 Modos]
+```
+
 ## 🖥️ Vista previa
 
 <div align="center">
@@ -231,18 +247,3 @@ Bogotá D.C. · 2026
 *Profesor: Ing. Rogerio Orlando Beltrán Castro*
 
 </div>
-## Arquitectura
-
-```mermaid
-flowchart TD
-    A[main - SwingUtilities + JFrame] --> B[GLCanvas - JOGL Context]
-    B --> C[init - Configura OpenGL]
-    B --> D[reshape - Dimensiones W/H]
-    B --> E[display - Loop de Renderizado]
-    E --> F[proyeccionOrtogonal - Cuadrante Sup-Izq]
-    E --> G[proyeccionGabinete - Cuadrante Sup-Der]
-    E --> H[proyeccionPerspectivaSimetrica - Cuadrante Inf-Izq]
-    E --> I[proyeccionPerspectivaOblicua - Cuadrante Inf-Der]
-    E --> J[dibujarSeparadores - Lineas Divisorias 2D]
-    F & G & H & I --> K[Cubo 3D - Renderizado en 4 Modos]
-```
